@@ -1,4 +1,5 @@
 # DevDeck-web
+<img width="2880" height="1740" alt="image" src="https://github.com/user-attachments/assets/5c0a2e91-6936-460d-bac0-1dd73ffb134a" />
 
 개발자를 위한 모던 블로그 플랫폼입니다. Vue 3, TypeScript, Tailwind CSS를 사용하여 구축된 반응형 웹 애플리케이션입니다.
 
