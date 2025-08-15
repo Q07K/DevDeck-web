@@ -2,7 +2,6 @@
   <header class="sticky top-0 z-40 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
     <div class="container mx-auto px-4 h-16 flex items-center justify-between">
       <router-link to="/" class="flex items-center space-x-2 text-2xl font-bold">
-        <span>📱</span>
         <span>DevDeck</span>
       </router-link>
       
