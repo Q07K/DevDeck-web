@@ -1,7 +1,33 @@
 <template>
   <div>
-    <h1>Debug: HomeView is loading</h1>
-    <p>Posts count: {{ posts.length }}</p>
+    <!-- API 테스트를 위한 임시 섹션 -->
+    <div class="mb-8 p-4 border border-blue-200 rounded-lg bg-blue-50 dark:bg-blue-900/20 dark:border-blue-800">
+      <h2 class="text-lg font-bold mb-2 text-blue-800 dark:text-blue-200">🚧 개발 중 - API 테스트</h2>
+      <p class="text-sm text-blue-600 dark:text-blue-300 mb-4">
+        아직 백엔드 서버가 준비되지 않아서 실제 API 호출은 실패할 수 있습니다. 
+        로그인/회원가입 페이지는 정상적으로 작동합니다.
+      </p>
+      <div class="flex space-x-2">
+        <router-link 
+          to="/login" 
+          class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+          로그인 페이지
+        </router-link>
+        <router-link 
+          to="/signup" 
+          class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+        >
+          회원가입 페이지
+        </router-link>
+        <router-link 
+          to="/api-test" 
+          class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700"
+        >
+          API 테스트
+        </router-link>
+      </div>
+    </div>
     
     <div class="flex flex-col md:flex-row gap-8">
       <!-- Main Content -->
@@ -20,7 +46,7 @@
           <input 
             type="text" 
             placeholder="검색..." 
-            class="w-full pl-10 pr-4 py-2 rounded-md bg-gray-100 dark:bg-gray-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full pl-10 pr-4 py-2 rounded-md bg-gray-100 dark:bg-gray-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-gray-100"
           >
           <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
         </div>
