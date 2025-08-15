@@ -15,14 +15,16 @@
         </button>
         
         <!-- 로그인한 경우 -->
+        <!-- 임시로 항상 표시 -->
+        <router-link 
+          to="/new-post"
+          class="hidden md:flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200"
+        >
+          <span>➕</span>
+          <span>새 글 작성</span>
+        </router-link>
+        
         <template v-if="isLoggedIn">
-          <router-link 
-            to="/new-post"
-            class="hidden md:flex items-center space-x-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200"
-          >
-            <span>➕</span>
-            <span>새 글 작성</span>
-          </router-link>
           
           <!-- 사용자 드롭다운 -->
           <div class="relative" ref="userMenuRef">

@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
     path: '/new-post',
     name: 'PostEditor',
     component: () => import('@/views/PostEditorView.vue'),
-    meta: { requiresAuth: true }
+    // meta: { requiresAuth: true }  // 임시로 제거
   },
   {
     path: '/user/:id',
