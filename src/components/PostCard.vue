@@ -6,12 +6,12 @@
     <div class="p-6">
       <div class="flex items-center space-x-3 mb-4">
         <img 
-          :src="`https://placehold.co/40x40/6366f1/ffffff?text=${author.nickname.charAt(0)}`" 
-          :alt="author.nickname" 
+          :src="`https://placehold.co/40x40/6366f1/ffffff?text=${post.author.nickname.charAt(0)}`" 
+          :alt="post.author.nickname" 
           class="w-10 h-10 rounded-full"
         >
         <div>
-          <p class="font-semibold">{{ author.nickname }}</p>
+          <p class="font-semibold">{{ post.author.nickname }}</p>
           <p class="text-sm text-gray-500 dark:text-gray-400">{{ formatDate(post.createdAt) }}</p>
         </div>
       </div>
@@ -33,7 +33,7 @@
         
         <div class="flex space-x-2">
           <span 
-            v-for="tag in post.tags" 
+            v-for="tag in (post.tags || [])" 
             :key="tag"
             class="text-sm bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-0.5"
           >
@@ -47,11 +47,10 @@
 
 <script setup lang="ts">
 import { Heart, MessageSquare } from 'lucide-vue-next'
-import type { Post, User } from '@/types'
+import type { PostSummaryResponse } from '@/types/api'
 
 interface Props {
-  post: Post
-  author: User
+  post: PostSummaryResponse
 }
 
 defineProps<Props>()
